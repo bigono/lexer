@@ -1,0 +1,14 @@
+package task12;
+
+/*
+ * Lexeme type constants
+ */
+enum Lex {
+    ID_OR_KW,
+    ASSIGN, PLUS, MINUS, ASTERISK, SLASH, QUOTE, APOSTROPHE,
+    COLON, SEMICOL, LPAREN, RPAREN, LBRACKET, RBRACKET, LBRACE, RBRACE,
+    INT, FLOAT,
+    ILLEGAL,
+    EOF, LEXER_ERROR, UNEXPECTED_EOF
+    ;
+}
