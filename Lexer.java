@@ -35,6 +35,7 @@ class Lexer {
 
                 {
                     put('-', Lex.MINUS);
+                    put('+', Lex.PLUS);
                     put('*', Lex.ASTERISK);
                     put('/', Lex.SLASH);
                     put(';', Lex.SEMICOL);
@@ -86,7 +87,9 @@ class Lexer {
 
                     if (cc == ':') {
                         step();
-                        if (cc == '=') { return new Lexeme(Lex.ASSIGN); }
+                        if (cc == '=') { 
+                            step();
+                            return new Lexeme(Lex.ASSIGN); }
                         return new Lexeme(Lex.COLON);
                     }
 
