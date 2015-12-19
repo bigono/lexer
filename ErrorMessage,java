@@ -1,0 +1,22 @@
+package task12;
+
+/*
+ * @see Lexeme
+ * Encapsulates details of an error a Lexeme is carrying out from Lexer.
+ * TODO Will implement multilanguage error messages with argument substitution in
+ * specified places ("%s"-syntax, probably).
+ */
+class ErrorMessage {
+    public enum Codes { EOF_WHILE_SMTH };
+    public Codes code;
+    public String[] args;
+
+    public ErrorMessage(Codes aCode, String[] anArgs) {
+        code = aCode;
+        args = anArgs;
+    }
+
+    public String toString() {
+        return this.getClass().getName() + " \t" + code.toString() + " \t" + args;
+    }
+}
