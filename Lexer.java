@@ -15,6 +15,7 @@ import java.util.Map;
  *      } while (! l.hasFinished());
  *
  * Not designed for extending through inheritance
+ TEST   ПРИВЕТ
  */
 class Lexer {
     public final static String[] reservedKeywords = {
